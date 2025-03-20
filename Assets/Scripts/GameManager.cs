@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
         {
             timeRemaining -= Time.deltaTime;
             timerSlider.value = timeRemaining;
-            timerText.text = "Time: " + Mathf.CeilToInt(timeRemaining);
+            timerText.text = " " + Mathf.CeilToInt(timeRemaining);
 
             if (timeRemaining <= 0)
             {
