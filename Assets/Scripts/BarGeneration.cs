@@ -34,6 +34,13 @@ public class BarGeneration : MonoBehaviour
 
             GameObject newBar = Instantiate(randomBarPrefab, transformRef);
             newBar.transform.localPosition = new Vector3(0, i * (barHeight + barSpacing), 0);
+            // get all the buttons on the bar
+            // tell the buttqons what bar they are on
+            var music = newBar.GetComponentsInChildren<Music>();
+            foreach (var m in music)
+            {
+                m.SetBarIndex(i);
+            }
 
             bars.Add(newBar);
         }
