@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8a5528fce51cda4e8976a68535dd7db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ClickAudio: {fileID: 8300000, guid: 73b2dc155351d0d4589800689a30c6dd, type: 3}
-  ClickAudio2: {fileID: 8300000, guid: a8e583202fadf4f4ca1abebece948bf3, type: 3}
-  ClickAudio3: {fileID: 8300000, guid: 8b8e7d94997f9054e955e3fc70ef825e, type: 3}
+  ClickAudio: {fileID: 8300000, guid: 7e08730114cd2ec4496a528f9472df80, type: 3}
+  ClickAudio2: {fileID: 8300000, guid: 9cc69b4131bba414cb42a41f3f9d6a01, type: 3}
+  ClickAudio3: {fileID: 8300000, guid: ac01709051cc7624e8fa6f91261043e9, type: 3}
   ClickAudio4: {fileID: 8300000, guid: 528974ff5db33864c8e2b48aa15c2ea6, type: 3}

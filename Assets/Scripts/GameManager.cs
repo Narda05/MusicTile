@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     private bool gameOver = false;
     private int score = -1;
     private float timeRemaining;
-    private const float gameTime = 20f;
+    private const float gameTime = 30f;
 
     public static GameManager Instance { get; private set; }
     public bool GameOver { get { return gameOver; } }
@@ -70,6 +70,11 @@ public class GameManager : MonoBehaviour
     public void EndGame()
     {
         gameOver = true;
+        BarGeneration barGen = FindObjectOfType<BarGeneration>();
+        if (barGen != null)
+        {
+            barGen.DisableAllButtons();
+        }
         SendScoreToLeaderboard(); //Score to Leaderboard
         gameOverScreen.SetActive(true); 
         scoreText.text = "Final score: " + score;
@@ -88,6 +93,13 @@ public class GameManager : MonoBehaviour
         gameOverScreen.SetActive(false); // Desactiva el Game Over Screen
         scoreText.text = "Points: " + score;
         timerSlider.value = gameTime;
+
+        //Restart the bars
+        BarGeneration barGen = FindObjectOfType<BarGeneration>();
+        if (barGen != null)
+        {
+            barGen.ResetBars();
+        }
     }
 
     private void SendScoreToLeaderboard()

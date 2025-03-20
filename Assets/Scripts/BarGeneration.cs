@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BarGeneration : MonoBehaviour
 {
@@ -48,6 +49,29 @@ public class BarGeneration : MonoBehaviour
         foreach (GameObject bar in bars)
         {
             bar.transform.position = new Vector3(bar.transform.position.x, bar.transform.position.y + 100, bar.transform.position.z);
+        }
+    }
+    public void ResetBars()
+    {
+        // Eliminar las barras existentes
+        foreach (GameObject bar in bars)
+        {
+            Destroy(bar);
+        }
+        bars.Clear();
+
+        // Generar nuevas barras
+        GenerateBars();
+    }
+
+    public void DisableAllButtons()
+    {
+        foreach (GameObject bar in bars)
+        {
+            foreach (Button btn in bar.GetComponentsInChildren<Button>())
+            {
+                btn.interactable = false;
+            }
         }
     }
 }
