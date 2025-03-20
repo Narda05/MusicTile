@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
+        
         gameOver = false;
         score = 0;
         gameOverScreen.SetActive(false); 
@@ -119,5 +120,13 @@ public class GameManager : MonoBehaviour
         }
     }
        
+
+    //
+    //public void Conintue()
+    //{
+    //    gameOver = false;
+    //    gameOverScreen.SetActive(false);
+    //    tree.Initialize();
+    //}
 
 }
