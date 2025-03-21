@@ -74,4 +74,15 @@ public class BarGeneration : MonoBehaviour
             }
         }
     }
+
+    public void EnableAllButtons()
+    {
+        foreach (GameObject bar in bars)
+        {
+            foreach (Button btn in bar.GetComponentsInChildren<Button>())
+            {
+                btn.interactable = true;
+            }
+        }
+    }
 }

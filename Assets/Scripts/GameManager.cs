@@ -145,17 +145,18 @@ public class GameManager : MonoBehaviour
     {
         gameOver = false;
         gameOverScreen.SetActive(false);
-
-        timeRemaining = gameTime;
-        timerSlider.maxValue = gameTime;
-        timerSlider.value = gameTime;
+        // timeRemaining = gameTime;
+        // timerSlider.maxValue = gameTime;
+        // timerSlider.value = gameTime;
 
         // enable all the buttons
-        //BarGeneration barGen = FindFirstObjectByType<BarGeneration>();
-        //if (barGen != null)
-        //{
-        //    barGen.EnableAllButtons();
-        //}
+        BarGeneration barGen = FindFirstObjectByType<BarGeneration>();
+        if (barGen != null)
+        {
+            barGen.EnableAllButtons();
+        }
     }
+
+    
 
 }
