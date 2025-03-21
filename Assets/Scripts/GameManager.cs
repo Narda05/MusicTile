@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
     public void EndGame()
     {
         gameOver = true;
-        BarGeneration barGen = FindObjectOfType<BarGeneration>();
+        BarGeneration barGen = FindFirstObjectByType<BarGeneration>();
         if (barGen != null)
         {
             barGen.DisableAllButtons();
@@ -95,7 +95,7 @@ public class GameManager : MonoBehaviour
         timerSlider.value = gameTime;
 
         //Restart the bars
-        BarGeneration barGen = FindObjectOfType<BarGeneration>();
+        BarGeneration barGen = FindFirstObjectByType<BarGeneration>();
         if (barGen != null)
         {
             barGen.ResetBars();
