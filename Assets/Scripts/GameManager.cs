@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text timerText;
     [SerializeField] private Slider timerSlider; // Referencia al Slider en la UI
     [SerializeField] private TMP_Text scoreText;
+    [SerializeField] private UIAnimations uiAnimations;
 
     //Leaderboards UI update
     [Header("Leaderboard UI")]
@@ -25,6 +26,8 @@ public class GameManager : MonoBehaviour
     private int score = -1;
     private float timeRemaining;
     private const float gameTime = 30f;
+
+    private Color sliderStartColor;
 
     public static GameManager Instance { get; private set; }
     public bool GameOver { get { return gameOver; } }
@@ -50,6 +53,7 @@ public class GameManager : MonoBehaviour
         timeRemaining = gameTime;
         timerSlider.maxValue = gameTime;
         timerSlider.value = gameTime;
+        sliderStartColor = timerSlider.fillRect.GetComponent<Image>().color;
     }
 
     void Update()
@@ -60,6 +64,7 @@ public class GameManager : MonoBehaviour
             timerSlider.value = timeRemaining;
             timerText.text = " " + Mathf.CeilToInt(timeRemaining);
 
+            timerSlider.fillRect.GetComponent<Image>().color = Color.Lerp(Color.red, sliderStartColor, Mathf.Clamp(timeRemaining / gameTime, 0.0f, 1.0f));
             if (timeRemaining <= 0)
             {
                 EndGame();
@@ -76,7 +81,9 @@ public class GameManager : MonoBehaviour
             barGen.DisableAllButtons();
         }
         SendScoreToLeaderboard(); //Score to Leaderboard
-        gameOverScreen.SetActive(true); 
+        gameOverScreen.SetActive(true);
+        uiAnimations.ShowGameOverScreen();
+        uiAnimations.ShowHighScoreScreen();
         scoreText.text = "Final score: " + score;
     }
     public void IncScore()
@@ -131,14 +138,24 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-       
 
-    //
-    //public void Conintue()
-    //{
-    //    gameOver = false;
-    //    gameOverScreen.SetActive(false);
-    //    tree.Initialize();
-    //}
+
+
+    public void Continue()
+    {
+        gameOver = false;
+        gameOverScreen.SetActive(false);
+
+        timeRemaining = gameTime;
+        timerSlider.maxValue = gameTime;
+        timerSlider.value = gameTime;
+
+        // enable all the buttons
+        //BarGeneration barGen = FindFirstObjectByType<BarGeneration>();
+        //if (barGen != null)
+        //{
+        //    barGen.EnableAllButtons();
+        //}
+    }
 
 }

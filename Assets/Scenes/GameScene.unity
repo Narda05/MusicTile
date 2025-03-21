@@ -371,14 +371,14 @@ RectTransform:
   m_GameObject: {fileID: 45022204}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8832432, y: 0.6729316, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1333980164}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 14.6}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &45022206
@@ -428,10 +428,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16.7
-  m_fontSizeBase: 16.7
+  m_fontSize: 30.05
+  m_fontSizeBase: 28.5
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -466,7 +466,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 3.5995026, y: 0, z: 4.6793594, w: 0}
+  m_margin: {x: -37.522408, y: 4.4957886, z: -36.955353, w: -23.41612}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2253,7 +2253,7 @@ GameObject:
   - component: {fileID: 176957814}
   - component: {fileID: 176957818}
   m_Layer: 0
-  m_Name: Button (1)
+  m_Name: WatchAD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2268,7 +2268,7 @@ RectTransform:
   m_GameObject: {fileID: 176957812}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.8408868, y: 1.1979432, z: 0.8851}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 729996818}
@@ -2277,7 +2277,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -5, y: -27.7}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 250, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &176957814
 MonoBehaviour:
@@ -4270,11 +4270,11 @@ RectTransform:
   m_GameObject: {fileID: 441357039}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5625, y: 2.6491456, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1333980164}
   - {fileID: 1727667123}
+  - {fileID: 1333980164}
   - {fileID: 1346427155}
   - {fileID: 176957813}
   m_Father: {fileID: 505626567}
@@ -4282,7 +4282,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 600, y: 400}
+  m_SizeDelta: {x: 776.23, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &441357041
 MonoBehaviour:
@@ -4755,7 +4755,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 505626563}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc20f1978a22435419167a7981e76b4b, type: 3}
   m_Name: 
@@ -4768,8 +4768,7 @@ MonoBehaviour:
   - {fileID: 1346427156}
   - {fileID: 176957815}
   - {fileID: 121774126}
-  - {fileID: 0}
-  - {fileID: 0}
+  animStartDelay: 0
 --- !u!1 &506487217
 GameObject:
   m_ObjectHideFlags: 0
@@ -7336,7 +7335,7 @@ RectTransform:
   m_GameObject: {fileID: 729996817}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8324137, y: 0.65951324, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 176957813}
@@ -7366,7 +7365,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Watch Ad
+  m_text: WATCH AD
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f98cbc0495c514043960b7261baefebf, type: 2}
   m_sharedMaterial: {fileID: 7363758469213722452, guid: f98cbc0495c514043960b7261baefebf, type: 2}
@@ -7393,10 +7392,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.8
+  m_fontSize: 28.7
   m_fontSizeBase: 18.8
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -7431,7 +7430,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 2.9262848, y: 0, z: 2.9263, w: 0}
+  m_margin: {x: -38.59828, y: -8.01355, z: -37.141266, w: -8.742004}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -11889,7 +11888,7 @@ RectTransform:
   m_GameObject: {fileID: 1333980163}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.8721976, y: 1.31818, z: 1.5283246}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 45022205}
@@ -11897,8 +11896,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5, y: 18.8}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -5, y: 94}
+  m_SizeDelta: {x: 250, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1333980165
 MonoBehaviour:
@@ -12114,7 +12113,7 @@ GameObject:
   - component: {fileID: 1346427157}
   - component: {fileID: 1346427156}
   m_Layer: 0
-  m_Name: Button
+  m_Name: PlayAgain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12129,7 +12128,7 @@ RectTransform:
   m_GameObject: {fileID: 1346427154}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.477029, y: 0.57066786, z: 0.87625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1456427578}
@@ -12137,8 +12136,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5, y: -68.1}
-  m_SizeDelta: {x: 200, y: 60}
+  m_AnchoredPosition: {x: -5, y: -160}
+  m_SizeDelta: {x: 250, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1346427156
 MonoBehaviour:
@@ -13134,7 +13133,7 @@ RectTransform:
   m_GameObject: {fileID: 1456427577}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7728916, y: 1.0534177, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1346427155}
@@ -13191,10 +13190,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 31.2
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -13229,7 +13228,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -6.8811436, y: 0, z: -7.4604416, w: 0}
+  m_margin: {x: -9.795176, y: 0, z: -7.4604416, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -16070,7 +16069,7 @@ RectTransform:
   m_GameObject: {fileID: 1727667122}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.7574373, y: 1.0875, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 441357040}
@@ -16127,8 +16126,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 83
+  m_fontSizeBase: 83
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -16165,7 +16164,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 108.537384, y: 0, z: 108.72641, w: 0}
+  m_margin: {x: 34.21228, y: 0, z: 34.540802, w: -47.276245}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -16812,6 +16811,7 @@ MonoBehaviour:
   timerText: {fileID: 295240819}
   timerSlider: {fileID: 80187403}
   scoreText: {fileID: 833144715}
+  uiAnimations: {fileID: 505626571}
   leaderboardUI: {fileID: 1992421778}
   namesText:
   - {fileID: 2042757953}

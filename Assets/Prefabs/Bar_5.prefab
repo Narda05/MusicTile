@@ -142,6 +142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 694718458280586954}
   - component: {fileID: 3774019832208111651}
+  - component: {fileID: 14615700633986728}
   m_Layer: 5
   m_Name: Bar_5
   m_TagString: Bar5
@@ -185,3 +186,20 @@ MonoBehaviour:
   ClickAudio2: {fileID: 8300000, guid: 9cc69b4131bba414cb42a41f3f9d6a01, type: 3}
   ClickAudio3: {fileID: 8300000, guid: ac01709051cc7624e8fa6f91261043e9, type: 3}
   ClickAudio4: {fileID: 8300000, guid: 528974ff5db33864c8e2b48aa15c2ea6, type: 3}
+--- !u!114 &14615700633986728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8374754180418666416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc20f1978a22435419167a7981e76b4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverScreen: {fileID: 0}
+  highScoreScreen: {fileID: 0}
+  animatedButtons:
+  - {fileID: 128686624113339778}
+  animStartDelay: 0.5

@@ -1,6 +1,7 @@
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
+using System;
 
 public class UIAnimations : MonoBehaviour
 {
@@ -11,36 +12,45 @@ public class UIAnimations : MonoBehaviour
     [Header("Botones")]
     public Button[] animatedButtons;
 
-    void Start()
+    public float animStartDelay = 0.0f;
+
+    private void OnEnable()
     {
-        // Animar pantallas cuando aparezcan
-        if (gameOverScreen != null)
-            gameOverScreen.localScale = Vector3.zero; // Ocultar al inicio
-
-        if (highScoreScreen != null)
-            highScoreScreen.localScale = Vector3.zero; // Ocultar al inicio
-
         // Animar botones
         foreach (Button btn in animatedButtons)
         {
-            RectTransform btnTransform = btn.GetComponent<RectTransform>();
-            btnTransform.DOScale(1.1f, 0.5f).SetLoops(-1, LoopType.Yoyo);
-            btn.onClick.AddListener(() => AnimateButtonClick(btnTransform));
+            if (btn != null)
+            {
+                RectTransform btnTransform = btn.GetComponent<RectTransform>();
+                btnTransform.DOScale(1.1f, 0.5f).SetLoops(-1, LoopType.Yoyo).SetDelay(UnityEngine.Random.Range(0.0f, animStartDelay));
+                btn.onClick.AddListener(() => AnimateButtonClick(btnTransform));
+            }
         }
     }
 
     public void ShowGameOverScreen()
     {
-        gameOverScreen.DOScale(1, 0.5f).SetEase(Ease.OutBack);
+        if (gameOverScreen != null)
+        {
+            gameOverScreen.localScale = Vector3.zero; // Ocultar al inicio
+            gameOverScreen.DOScale(1, 0.5f).SetEase(Ease.OutBack);
+        }
     }
 
     public void ShowHighScoreScreen()
     {
-        highScoreScreen.DOScale(1, 0.5f).SetEase(Ease.OutBack);
+        if (highScoreScreen != null)
+        {
+            highScoreScreen.localScale = Vector3.zero; // Ocultar al inicio
+            highScoreScreen.DOScale(1, 0.5f).SetEase(Ease.OutBack);
+        }
     }
 
     void AnimateButtonClick(RectTransform btnTransform)
     {
-        btnTransform.DOPunchScale(Vector3.one * 0.2f, 0.2f, 10, 1);
+        if (btnTransform != null)
+        {
+            btnTransform.DOPunchScale(Vector3.one * 0.2f, 0.2f, 10, 1);
+        }
     }
 }

@@ -14,11 +14,15 @@ public class RewardedAd : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLis
     {
         showAdButton.interactable = false;
     }
+    private void OnEnable()
+    {
+        LoadAd();
+    }
 
     public void LoadAd()
     {
         Debug.Log($"Loading Ad: {androidAdId}");
-        //Advertisement.Load(androidAdId, this);
+        Advertisement.Load(androidAdId, this);
     }
 
     public void OnUnityAdsAdLoaded(string adUnitId)
@@ -40,13 +44,12 @@ public class RewardedAd : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLis
 
     public void OnUnityAdsShowComplete(string adUnitId, UnityAdsShowCompletionState showCompletionState)
     {
-        if(adUnitId.Equals(androidAdId) && showCompletionState.Equals(UnityAdsCompletionState.COMPLETED))
+        if(adUnitId.Equals(androidAdId) && showCompletionState.Equals(UnityAdsShowCompletionState.COMPLETED))
         {
             Debug.Log("Unity Ads Rewarded Ad Completed");
             // if you are giving a reward, reviving, restarting, doubling points...
             // it is done here 
-            //GameManager.Instance;
-            //Advertisement.Load(androidAdId, this);
+            GameManager.Instance.Continue();
         }
     }
     public void OnUnityAdsFailedToLoad(string adUnitId, UnityAdsLoadError error, string message)
